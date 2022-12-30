@@ -18,8 +18,7 @@ public class RoutesConfig {
     @Bean
     public RouterFunction<ServerResponse> router(ProductHandler productHandler) {
         return route()
-                .GET("/products",
-                        productHandler::getAll)
+                .GET("/products", productHandler::getAll)
                 .build();
     }
 
